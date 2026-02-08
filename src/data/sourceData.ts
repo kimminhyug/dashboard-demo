@@ -1,0 +1,31 @@
+export const dataByKey: Record<string, unknown> = {
+  stat1: { value: '12.4k', subtitle: '이번 주', trend: 8.2 },
+  stat2: { value: '3.2%', subtitle: '목표 대비', trend: 0.5 },
+  stat3: { value: '₩2.1M', subtitle: '이번 달', trend: -2.1 },
+  stat4: { value: '24%', subtitle: '평균 대비', trend: -1.2 },
+  stat5: { value: '847', subtitle: '현재 접속', trend: 12 },
+  chartData1: [
+    { label: '월', value: 40 },
+    { label: '화', value: 65 },
+    { label: '수', value: 52 },
+    { label: '목', value: 78 },
+    { label: '금', value: 90 },
+    { label: '토', value: 55 },
+    { label: '일', value: 62 },
+  ],
+  chartData2: [
+    { label: 'A', value: 70 },
+    { label: 'B', value: 45 },
+    { label: 'C', value: 85 },
+    { label: 'D', value: 30 },
+    { label: 'E', value: 60 },
+  ],
+  chartData3: [
+    { label: '1', value: 20 },
+    { label: '2', value: 45 },
+    { label: '3', value: 35 },
+    { label: '4', value: 60 },
+    { label: '5', value: 50 },
+    { label: '6', value: 75 },
+  ],
+};

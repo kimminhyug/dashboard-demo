@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+}
+
+/* 그리드 셀 안에서 컨텐츠가 밖으로 튀어나오지 않도록 */
+.rd-dashboard {
+  overflow: hidden;
+}
+
+.rd-dashboard [role="gridcell"] {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 0;
+}
+
+.rd-panel {
+  width: 100% !important;
+  height: 100% !important;
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 위젯 래퍼: 부모(패널/그리드 셀) 너비에 맞춰 반응형 */
+.rd-widget-container {
+  flex: 1;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.rd-widget-container__content {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  min-height: 0;
+  overflow: auto;
+  box-sizing: border-box;
+}
+
+/* 부모 리사이즈가 그리드/차트까지 전달되도록 높이 체인 유지, base(1열) 시 그리드가 패널 밖으로 나가지 않도록 */
+.dashboard-runtime-wrap {
+  position: relative;
+  min-height: 0;
+  min-width: 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 옵션 사이드바(Select a panel to edit options) 미사용 → 숨김 */
+.dashboard-runtime-wrap aside {
+  display: none;
+}
